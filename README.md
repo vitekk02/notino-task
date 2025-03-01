@@ -61,3 +61,30 @@ npm run build
 ## Caching implementation
 
 The application uses TanStack Query (React Query) for data fetching and caching. The caching configuration can be found in [src/App.tsx](./src/App.tsx):
+
+```typescript
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false, // Prevents refetch when window regains focus
+      retry: 1, // Retry failed requests once
+      staleTime: 5 * 60 * 1000, // Data remains fresh for 5 minutes
+    },
+  },
+});
+```
+
+### Caching Behavior
+
+- **Stale Time**: Data is considered fresh for 5 minutes after fetching
+- **Window Focus**: The app won't refetch data when the window regains focus
+- **Retries**: Failed requests are retried once before showing an error
+- **Navigation**: When navigating between list and detail views, cached data is used if available and not stale
+
+## API generation
+
+The project uses Orval to generate TypeScript API client from OpenAPI specification:
+
+```bash
+npm run generate-api
+```
