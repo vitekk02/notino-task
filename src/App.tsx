@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { ProductList } from "./components/products/ProductList/productList";
+import { ProductList } from "./components/products/productList/productList";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ProductDetail } from "./components/products/ProductDetail/productDetail";
+import { ProductDetail } from "./components/products/productDetail/productDetail";
 import { Navbar } from "./components/layout/navbar/navbar";
 
 const queryClient = new QueryClient({

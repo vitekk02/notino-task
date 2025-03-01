@@ -2,7 +2,7 @@ import { FC } from "react";
 import { ProductDto } from "../../../api/dtos/product";
 import { Card, ImageContainer, Title, Price } from "./productCardStyles";
 import { useNavigate } from "react-router-dom";
-import { Image } from "../../common/image";
+import { Image } from "../../common/image/image";
 
 interface Props {
   product: ProductDto;

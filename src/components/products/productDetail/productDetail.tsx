@@ -22,7 +22,7 @@ import {
 } from "./productDetailStyles";
 import { Loading } from "../../layout/loading/loading";
 import { Error } from "../../layout/error/error";
-import { Image } from "../../common/image";
+import { Image } from "../../common/image/image";
 
 export const ProductDetail: FC = () => {
   const { id } = useParams();
