@@ -8,6 +8,7 @@ export const Card = styled.div`
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); // Even shadow all around
   transition: transform 0.2s ease;
+  cursor: pointer;
 
   &:hover {
     transform: translateY(-4px);

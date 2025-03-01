@@ -2,7 +2,12 @@ import { defineConfig } from "orval";
 
 export default defineConfig({
   fakeStoreAPI: {
-    input: "./openapi.json",
+    input: {
+      target: "./openapi.json",
+      filters: {
+        tags: ["Products"],
+      },
+    },
     output: {
       mode: "split",
       target: "./src/api/generated",
